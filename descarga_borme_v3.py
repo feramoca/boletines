@@ -49,7 +49,7 @@ for url in urls:
     # Descargar cada archivo PDF y guardarlo en el directorio con el prefijo adecuado
     for pdf_url in pdf_urls:
         pdf_response = requests.get(pdf_url)
-        pdf_name = os.path.join('downloaded_pdfs', url_suffix + pdf_url.split('/')[-1])
+        pdf_name = os.path.join('downloaded_pdfs_anual', url_suffix + pdf_url.split('/')[-1])
         with open(pdf_name, 'wb') as pdf_file:
             pdf_file.write(pdf_response.content)
 
